@@ -11,6 +11,12 @@ h1{
 li{
     list-style-type: none;
     margin-top: 5px;
+    color: aqua;
+}
+
+.navbar-default {
+    background-color:darkblue;
+    border-color: #E7E7E7;
 }
 
 nav a{
@@ -22,16 +28,16 @@ nav a{
     background-color: antiquewhite;
     border-radius: 10px;
 }
-nav a:visited{
+li a:visited{
     color:#607D8B;
 }
 
-nav a:hover{
+li a:hover{
     color:#039be5;
     background-color:darkgrey;
 }
 
-nav a.active{
+li a.active{
     color:#039be5;
 }
 .prog .badge{
