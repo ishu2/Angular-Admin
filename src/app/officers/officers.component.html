@@ -1,0 +1,18 @@
+
+
+
+  <h2 style="text-align:center">OFFICERS</h2>
+
+  <div class="bs-example">
+    <div class="list-group">
+        <ul class="off">
+            <li style=" list-style-type: none; margin-top: 5px;" *ngFor="let elt of officers">
+              <a [routerLink]="['/officers',elt.id]" class="list-group-item " >
+                 <span>{{elt.id}}</span><span style="margin-right:15px;"></span><span> {{elt.name}}</span> <span class="badge">{{elt.doj}}</span>
+               </a>
+            </li>
+        </ul>
+    </div>
+  </div>
+  
+  
