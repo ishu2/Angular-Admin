@@ -1,0 +1,26 @@
+
+
+
+  <h2 style="text-align:center">TASKS</h2>
+
+  <div class="container">
+        <div class="list-group">
+                <ul class="prog">
+                    <li style=" list-style-type: none; margin-top: 5px;" *ngFor="let pg of tasks">
+                      <div class="list-group-item jumbotron" >
+                          <h4>District : <span style="color:chocolate">{{pg.district}}</span></h4>
+                          <h4>Description :<span style="color:chocolate">
+                                {{pg.description}}
+                            </span> </h4>
+                          
+                          <h6>Start Date : <span style="color:chocolate">{{pg.start_date}}</span></h6>
+                          <h6>Start Date : <span style="color:chocolate">{{pg.deadline}}</span></h6>
+                         <p style="margin-top:10px;"> <button (click)="delete(pg.id)" type="button" class="btn btn-danger" style="display:inline-block">Delete</button>
+                         </p>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+  </div>
+  
+  

@@ -14,10 +14,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {NewOfficerComponent} from './new-officer/new-officer.component';
 import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 import {OfficersComponent} from './officers/officers.component'
+import {TasksComponent} from './tasks/tasks.component';
+import {NewTaskComponent} from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
-    AppComponent,ProgrammesComponent,DetailComponent,NewProgrammeComponent,NewOfficerComponent,OfficersComponent
+    AppComponent,ProgrammesComponent,DetailComponent,NewProgrammeComponent,NewOfficerComponent,OfficersComponent,TasksComponent,NewTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,9 @@ import {OfficersComponent} from './officers/officers.component'
       {path:'programmes/:id',component:DetailComponent},
       {path:'new',component:NewProgrammeComponent},
       {path:'newOfficer',component:NewOfficerComponent},
-      {path:'officers',component:OfficersComponent}
+      {path:'officers',component:OfficersComponent},
+      {path:'tasks',component:TasksComponent},
+      {path:'newTask',component:NewTaskComponent}
     ])
   ],
   providers: [ProgrammeService],

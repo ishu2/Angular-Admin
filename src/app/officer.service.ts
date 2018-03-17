@@ -21,6 +21,10 @@ officers=[
     {id:8,name:"Viraj",district:"Rohini-36",doj:"12/04/16",rtd:"12/11/80"} 
 ]
 
+getLength(){
+    return this.officers.length;
+}
+
 getOfficers(){
     return this.officers;
 }
