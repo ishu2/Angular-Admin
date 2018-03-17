@@ -11,7 +11,8 @@ import {PROGRAMMES} from './dummy-programmes';
 import {NewProgrammeComponent} from './new-programme/new-programme.component';
 import {ProgrammeService} from './programmes.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import {NewOfficerComponent} from './new-officer/new-officer.component'
+import {NewOfficerComponent} from './new-officer/new-officer.component';
+import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {NewOfficerComponent} from './new-officer/new-officer.component'
   imports: [
     BrowserModule,
     HttpModule,
+    DlDateTimePickerDateModule,
     FormsModule,
     RouterModule.forRoot([
       {path:'',component:AppComponent},

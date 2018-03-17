@@ -15,7 +15,13 @@
         <div class="form-group">
             <label for="schemes" class="control-label col-xs-2">DISTRICT</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" #nameRef="ngModel" ngModel placeholder="DISTRICT" required>
+                    <select class="form-control">
+                            <option value="one">One</option>
+                            <option value="two">Two</option>
+                            <option value="three">Three</option>
+                            <option value="four">Four</option>
+                            <option value="five">Five</option>
+                     </select>
             </div>
         </div>
         <div class="form-group">
@@ -25,14 +31,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="description" class="control-label col-xs-2">STATUS</label>
-            <div class="col-xs-10">
-              <span>  <input type="checkbox">   </span>
+            <label for="status" class="control-label col-xs-2">STATUS</label>
+            <div class="radio">
+                <label class="control-label col-xs-2"><input type="radio" name="optradio">Retired</label>    
+                <label class="control-label col-xs-2"><input type="radio" name="optradio">Not-Retired</label>
             </div>
-        </div>
+         </div>
         <div class="form-group">
             <div class="col-xs-offset-2 col-xs-10">
-                <button  class="btn btn-primary">ADD</button>
+                <button  class="btn btn-primary">ADD OFFICER</button>
             </div>
         </div>
     </form>
