@@ -1,0 +1,40 @@
+<div class="jumbotron bs-example" style="background-color:antiquewhite">
+    <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">ID</label>
+            <div class="col-xs-10">
+                <input type="email" class="form-control" #nameRef="ngModel" ngModel placeholder="ID" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="control-label col-xs-2">NAME</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" #nameRef="ngModel" ngModel placeholder="NAME" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="schemes" class="control-label col-xs-2">DISTRICT</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" #nameRef="ngModel" ngModel placeholder="DISTRICT" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date" class="control-label col-xs-2">DATE OF JOINING</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" #nameRef="ngModel" ngModel placeholder="DATE" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description" class="control-label col-xs-2">STATUS</label>
+            <div class="col-xs-10">
+              <span>  <input type="checkbox">   </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button  class="btn btn-primary">ADD</button>
+            </div>
+        </div>
+    </form>
+</div>
+

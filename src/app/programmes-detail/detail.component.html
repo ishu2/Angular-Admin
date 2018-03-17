@@ -1,0 +1,22 @@
+
+<div class="container" style="margin-top:20px;">
+        <h3 style="text-align:center; color:brown;">{{data[id-1].name}}</h3>
+   <div class="jumbotron">
+       <div class="row">
+           <h4>DESCRIPTION:</h4>
+           <p style="color:cornflowerblue">{{data[id-1].description}}</p>
+       </div>
+       <div class="row">
+          <span> <h6>LAUNCH DATE : <span style="margin-left:5px; color:coral">{{data[id-1].date}}</span></h6></span>
+       </div>
+       <div class="row">
+           <div class="list-group">
+               <ul>
+                   <li style=" list-style-type: none; margin-top: 5px;" *ngFor="let sc of "{{data[id-1].schemes}}>
+                       <span>sc</span>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </div>
+</div>
