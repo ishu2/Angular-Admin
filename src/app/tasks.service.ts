@@ -28,6 +28,7 @@ getTasks(){
 }
 
 addTask(task:Task){
+    console.log(task);
     this.tasks.push(task);
 }
 

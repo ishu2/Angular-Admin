@@ -5,8 +5,6 @@
 .form-horizontal .control-label{
     padding-top: 7px;
 }
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import '~open-iconic/font/css/open-iconic-bootstrap.css';
 
 dl-date-time-picker{
     display:inline-block;

@@ -1,16 +1,16 @@
 <div class="jumbotron bs-example" style="background-color:antiquewhite">
-        <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit()">
+        <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
             <div class="form-group">
                 <label for="inputEmail" class="control-label col-xs-2">ID</label>
                 <div class="col-xs-10">
-                    <input type="email" class="form-control" ngControl="id" [(ngModel)]="newTask.id" placeholder="ID" required>
+                    <input type="email" class="form-control" name="id" ngModel #id="ngModel" placeholder="ID" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="name" class="control-label col-xs-2">DISTRICT</label>
                 <div class="col-xs-10">
                     <div class="col-xs-4">
-                            <select  class="form-control"  ngControl="name" [(ngModel)]="newTask.district">
+                            <select  class="form-control" name="district"  ngModel #district="ngModel">
                                     <option value="delhi">Delhi</option>
                                     <option value="punjab">Punjab</option>
                                     <option value="haryana">Haryana</option>
@@ -18,7 +18,7 @@
                             </select>
                     </div>
                     <div class="col-xs-4">
-                            <select  class="form-control"  ngControl="name" [(ngModel)]="newOfficer.name">
+                            <select  class="form-control"  ngModel >
                                     <option value="110023">110023</option>
                                     <option value="223444">223444</option>
                                     <option value="123231">123231</option>
@@ -33,27 +33,27 @@
             <div class="form-group">
                     <label for="inputEmail" class="control-label col-xs-2">SID</label>
                     <div class="col-xs-10">
-                        <input type="number" class="form-control" ngControl="sid" [(ngModel)]="newTask.sid" placeholder="ID" required>
+                        <input type="number" class="form-control" name="sid" ngModel #sid="ngModel" placeholder="ID" required>
                     </div>
             </div>
 
             <div class="form-group">
                 <label for="schemes" class="control-label col-xs-2">START DATE</label>
                 <div class="col-xs-10">
-                        <input type="text" class="form-control" ngControl="start_date" [(ngModel)]="newTask.start_date">                   
+                        <input type="text" class="form-control" name="start_date" ngModel #start_date="ngModel">                   
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="date" class="control-label col-xs-2">DEADLINE</label>
                 <div class="col-xs-10">
-                    <input type="text" class="form-control" ngControl="doj" [(ngModel)]="newTask.deadline"  placeholder="DEADLINE" required>
+                    <input type="text" class="form-control" name="deadline" ngModel #deadline="ngModel"  placeholder="DEADLINE" required>
                 </div>
             </div>
             <div class="form-group">
                     <label for="date" class="control-label col-xs-2">DESCRIPTION</label>
                     <div class="col-xs-10">
-                        <textarea rows="5" cols="8" class="form-control" ngControl="description" [(ngModel)]="newTask.description"  placeholder="DESCRIPTION.." required></textarea>
+                        <textarea rows="5" cols="8" class="form-control" name="description" ngModel #description="ngModel"  placeholder="DESCRIPTION.." required></textarea>
                     </div>
              </div>
             <div class="form-group">
