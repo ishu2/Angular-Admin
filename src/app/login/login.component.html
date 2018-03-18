@@ -1,0 +1,38 @@
+<div class="container jumbotron" style="width:60%; background-color:bisque; margin-top:30px;">
+<div class="bs-example">
+    <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Email</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" #username="ngModel" required minlength="4" name="username" placeholder="username" ngModel>
+                <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger">       
+                    <div [hidden]="!username.errors.required">
+                        Please enter your username/email
+                    </div>
+                    <div [hidden]="!username.errors.minlength">
+                        Please enter atleast 4 characters
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Password</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" #password="ngModel" required minlength="6" name="password" placeholder="username" ngModel>
+                <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                    <div [hidden]="!password.errors.required">
+                        Please enter your password
+                    </div>
+                    <div [hidden]="!password.errors.minlength">
+                        Please enter atleast 6 characters
+                    </div>
+                </div>    </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>

@@ -15,10 +15,11 @@ import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 import {OfficersComponent} from './officers/officers.component'
 import {TasksComponent} from './tasks/tasks.component';
 import {NewTaskComponent} from './new-task/new-task.component';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent,ProgrammesComponent,DetailComponent,NewProgrammeComponent,NewOfficerComponent,OfficersComponent,TasksComponent,NewTaskComponent
+    AppComponent,LoginComponent,ProgrammesComponent,DetailComponent,NewProgrammeComponent,NewOfficerComponent,OfficersComponent,TasksComponent,NewTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +34,12 @@ import {NewTaskComponent} from './new-task/new-task.component';
       {path:'newOfficer',component:NewOfficerComponent},
       {path:'officers',component:OfficersComponent},
       {path:'tasks',component:TasksComponent},
-      {path:'newTask',component:NewTaskComponent}
+      {path:'newTask',component:NewTaskComponent},
+      {path:'login',component:LoginComponent}
     ])
   ],
   providers: [ProgrammeService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

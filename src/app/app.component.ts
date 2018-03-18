@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
-import { ProgrammeService } from './programmes.service';
+import {Component,OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers:[ProgrammeService]
+    selector:'app-root',
+    templateUrl:'./app.component.html',
+    styleUrls:['./app.component.css']
 })
-export class AppComponent {
-  title = 'WELCOME';
+
+export class AppComponent{
+    constructor(private router:Router){
+
+    }
+
+    onSubmit(value:any){
+      this.router.navigateByUrl('/admin');
+    }
+
 }
