@@ -7,9 +7,12 @@
     <div class="list-group">
         <ul class="off">
             <li style=" list-style-type: none; margin-top: 5px;" *ngFor="let elt of officers">
-              <a [routerLink]="['/officers',elt.id]" class="list-group-item " >
-                 <span>{{elt.id}}</span><span style="margin-right:15px;"></span><span> {{elt.name}}</span><span style="margin-right:50px;"></span><span>{{elt.district}}</span> <span class="badge">{{elt.doj}}</span> <span class="badge">{{elt.rtd}}</span>
-               </a>
+              <div class="jumbotron">
+                <h3>Name :<span style="color:blue; margin-left:2px;">{{elt.name}}</span></h3>
+                <h3>District :<span style="color:blue; margin-left:2px;">{{elt.district}}</span></h3>
+                <h3>Date Of Joining :<span style="color:blue; margin-left:2px;">{{elt.doj}}</span></h3>
+                <h3>Retiring Date : :<span style="color:blue; margin-left:2px;">{{elt.rtd}}</span></h3>
+              </div>
             </li>
         </ul>
     </div>
