@@ -7,12 +7,17 @@
   <div class="list-group">
       <ul class="prog">
           <li style=" list-style-type: none; margin-top: 5px;" *ngFor="let pg of programmes">
-            <a [routerLink]="['/programmes',pg.id]" class="list-group-item " >
-               <span>{{pg.id}}</span><span style="margin-right:15px;"></span><span> {{pg.name}}</span> <span class="badge">{{pg.date}}</span>
-             </a>
-             <button (click)="delete(pg.id)" type="button" class="btn btn-danger" style="display:inline-block">Delete</button>
-             <button (click)="edit(pg.id)" type="button" class="btn btn-success" style="display:inline-block">Edit</button>
-          </li>
+            <div>
+                <a [routerLink]="['/programmes',pg.id]" class="list-group-item " >
+                  <span>{{pg.id}}</span><span style="margin-right:15px;"></span><span> {{pg.name}}</span> <span class="badge">{{pg.date}}</span>
+                </a>
+                <span>
+                    <button (click)="delete(pg.id)" type="button" class="btn btn-danger" style="display:inline-block">Delete</button>
+                    <button (click)="edit(pg.id)" type="button" class="btn btn-success" style="display:inline-block">Edit</button>       
+                </span>
+            </div>
+           
+              </li>
       </ul>
   </div>
 </div>
