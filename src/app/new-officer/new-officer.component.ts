@@ -15,7 +15,8 @@ export class NewOfficerComponent{
     public newOfficer:Officer;
 
     constructor(private router:Router , private officerService:OfficerService){}
-    onSubmit(){
+    onSubmit(officer:Officer){
+        console.log(officer);
         this.officerService.addOfficer(this.newOfficer);
         this.router.navigateByUrl('/officers')
     }

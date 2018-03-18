@@ -1,21 +1,21 @@
 <div class="jumbotron bs-example" style="background-color:antiquewhite">
-    <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">ID</label>
             <div class="col-xs-10">
-                <input type="email" class="form-control" ngControl="id" [(ngModel)]="newOfficer.id" placeholder="ID" required>
+                <input type="email" class="form-control" name="id" ngModel #id="ngModel" placeholder="ID" required>
             </div>
         </div>
         <div class="form-group">
             <label for="name" class="control-label col-xs-2">NAME</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control"  ngControl="name" [(ngModel)]="newOfficer.name" placeholder="NAME" required>
+                <input type="text" class="form-control"  name="name" ngModel #name="ngModel" placeholder="NAME" required>
             </div>
         </div>
         <div class="form-group">
             <label for="schemes" class="control-label col-xs-2">DISTRICT</label>
             <div class="col-xs-10"> 
-                <select  class="form-control"  ngControl="district" [(ngModel)]="newOfficer.district">
+                <select  class="form-control"  name="district" ngModel #district="ngModel" >
                          <option value="delhi">Delhi</option>
                          <option value="punjab">Punjab</option>
                          <option value="haryana">Haryana</option>
@@ -26,13 +26,13 @@
         <div class="form-group">
             <label for="date" class="control-label col-xs-2">DATE OF JOINING</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" ngControl="doj" [(ngModel)]="newOfficer.doj"  placeholder="DATE" required>
+                <input type="text" class="form-control" name="doj" ngModel #doj="ngModel"  placeholder="DATE" required>
             </div>
         </div>
         <div class="form-group">
                 <label for="date" class="control-label col-xs-2">RETIRED ON</label>
                 <div class="col-xs-10">
-                    <input type="text" class="form-control" ngControl="rtd" [(ngModel)]="newOfficer.rtd"  placeholder="DATE" required>
+                    <input type="text" class="form-control" name="rtd" ngModel #rtd="ngModel"  placeholder="DATE" required>
                 </div>
          </div>
         <div class="form-group">
