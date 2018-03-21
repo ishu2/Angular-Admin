@@ -7,8 +7,7 @@ import { NgForm } from '@angular/forms/src/directives/ng_form';
 @Component({
     selector:'add-officer',
     templateUrl:'./new-task.component.html',
-    styleUrls:['./new-task.component.css'],
-    providers:[TaskService]
+    styleUrls:['./new-task.component.css']
 })
 
 export class NewTaskComponent{
@@ -26,6 +25,6 @@ export class NewTaskComponent{
         this.newTask.description=form.value.description;
         this.newTask.deadline=form.value.deadline;
         this.taskService.addTask(this.newTask);
-        this.router.navigateByUrl('/tasks')
+        this.router.navigateByUrl('/home/tasks')
     }
 }

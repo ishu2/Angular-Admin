@@ -1,5 +1,5 @@
 <div class="jumbotron bs-example" style="background-color:antiquewhite">
-        <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <form class="form-horizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
             <div class="form-group">
                 <label for="inputEmail" class="control-label col-xs-2">ID</label>
                 <div class="col-xs-10">

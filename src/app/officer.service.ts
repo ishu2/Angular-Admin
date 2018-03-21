@@ -34,7 +34,7 @@ getOfficers(){
 }
 
 addOfficer(officer:Officer){
-    this.officers.push(officer);
+     this.officers.push(officer);
     this.officersSubject.next(this.officers);
     console.log("officers in service add",this.officers);
 }

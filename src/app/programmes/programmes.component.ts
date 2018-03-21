@@ -8,8 +8,7 @@ import {PROGRAMMES} from '../dummy-programmes';
 @Component({
     selector:'app-programmes',
     templateUrl:'./programmes.component.html',
-    styleUrls:['./programmes.component.css'],
-    providers:[ProgrammeService]
+    styleUrls:['./programmes.component.css']
 })
 export class ProgrammesComponent {
     constructor(private router:Router , private _programmeService:ProgrammeService){}

@@ -7,8 +7,7 @@ import {ProgrammeService} from '../programmes.service'
 @Component({
     selector:'add-programmes',
     templateUrl:'./new-programme.component.html',
-    styleUrls:['./new-programme.component.css'],
-    providers:[ProgrammeService]
+    styleUrls:['./new-programme.component.css']
 })
 export class NewProgrammeComponent{
 
@@ -16,9 +15,9 @@ export class NewProgrammeComponent{
 
  onSubmit(value:Programme){
      console.log(value);
-// this._programmeService.addProgrammes(value);
+ this._programmeService.addProgrammes(value);
 //this.route.navigate(['/programmes']);
-this.route.navigateByUrl('/programmes')
+this.route.navigateByUrl('/home/programmes')
  }
 
 

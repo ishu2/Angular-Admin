@@ -6,8 +6,7 @@ import {Officer} from '../officer';
 @Component({
     selector:'app-officers',
     templateUrl:'./officers.component.html',
-    styleUrls:['./officers.component.css'],
-    providers:[OfficerService]
+    styleUrls:['./officers.component.css']
 })
 
 export class OfficersComponent{

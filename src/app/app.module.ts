@@ -20,6 +20,7 @@ import {GraphComponent} from './graph/graph.component';
 import { graphService } from './graph.service';
 import {TaskService} from './tasks.service';
 import {HomeComponent} from './home/home.component'
+import { OfficerService } from './officer.service';
 
 
 @NgModule({
@@ -60,7 +61,7 @@ import {HomeComponent} from './home/home.component'
       }
     ])
   ],
-  providers: [ProgrammeService,graphService,TaskService],
+  providers: [ProgrammeService,graphService,TaskService,OfficerService],
   bootstrap: [AppComponent]
 })
 

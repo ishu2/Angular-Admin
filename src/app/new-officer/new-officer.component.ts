@@ -6,8 +6,7 @@ import { Officer } from '../officer';
 @Component({
     selector:'add-officer',
     templateUrl:'./new-officer.component.html',
-    styleUrls:['./new-officer.component.css'],
-    providers:[OfficerService]
+    styleUrls:['./new-officer.component.css']
 })
 
 export class NewOfficerComponent{
