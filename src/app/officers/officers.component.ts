@@ -19,7 +19,10 @@ export class OfficersComponent{
     }
 
     ngOnInit(){
-       this.officers= this.officerService.getOfficers()
+      this.officerService.officersSubject.subscribe(officers => {
+          console.log("officers in component",officers)
+          this.officers = officers;
+      })
      }
 
 }

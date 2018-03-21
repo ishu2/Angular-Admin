@@ -16,29 +16,51 @@ import {OfficersComponent} from './officers/officers.component'
 import {TasksComponent} from './tasks/tasks.component';
 import {NewTaskComponent} from './new-task/new-task.component';
 import {LoginComponent} from './login/login.component';
+import {GraphComponent} from './graph/graph.component';
+import { graphService } from './graph.service';
+import {TaskService} from './tasks.service';
+import {HomeComponent} from './home/home.component'
+
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,ProgrammesComponent,DetailComponent,NewProgrammeComponent,NewOfficerComponent,OfficersComponent,TasksComponent,NewTaskComponent
+    AppComponent,GraphComponent,LoginComponent,ProgrammesComponent,DetailComponent,NewProgrammeComponent,NewOfficerComponent,OfficersComponent,TasksComponent,NewTaskComponent,HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+
     DlDateTimePickerDateModule,
     FormsModule,
     RouterModule.forRoot([
-      {path:'',component:AppComponent},
-      {path:'programmes',component:ProgrammesComponent},
-      {path:'programmes/:id',component:DetailComponent},
-      {path:'new',component:NewProgrammeComponent},
-      {path:'newOfficer',component:NewOfficerComponent},
-      {path:'officers',component:OfficersComponent},
-      {path:'tasks',component:TasksComponent},
-      {path:'newTask',component:NewTaskComponent},
-      {path:'login',component:LoginComponent}
+      
+      {
+        path:'home',
+        component:HomeComponent,
+        children: [
+          {path:'programmes',component:ProgrammesComponent},
+          {path:'programmes/:id',component:DetailComponent},
+          {path:'new',component:NewProgrammeComponent},
+          {path:'newOfficer',component:NewOfficerComponent},
+          {path:'officers',component:OfficersComponent},
+          {path:'tasks',component:TasksComponent},
+          {path:'newTask',component:NewTaskComponent},
+          {path:'login',component:LoginComponent},
+          {path:'graph',component:GraphComponent}
+        ]
+      },
+      {
+        path:"login",
+        component: LoginComponent
+      },
+      {
+        path: '',
+        redirectTo: "home",
+        pathMatch: "full"
+      }
     ])
   ],
-  providers: [ProgrammeService],
+  providers: [ProgrammeService,graphService,TaskService],
   bootstrap: [AppComponent]
 })
 

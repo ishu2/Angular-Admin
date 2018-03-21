@@ -1,0 +1,21 @@
+<div style="text-align:center">
+
+        
+
+    <div id="navbarCollapse" class="collapse navbar-collapse navbar-default">
+            <ul class="nav navbar-nav" >
+                <li><a [routerLink]="['programmes']" routerLinkActive="active">Programmes</a></li>
+                <li><a [routerLink]="['officers']" >Officers</a></li>
+                <li><a [routerLink]="['tasks']" >Tasks</a></li>
+                <li><a [routerLink]="['graph']">Statistics</a></li>
+                <li><a [routerLink]="['new']" >Add New Programmes</a></li>
+                <li><a [routerLink]="['newOfficer']">Add New Officer</a></li>
+                <li><a [routerLink]="['newTask']">Add New Task</a></li>
+            </ul>
+        </div>
+
+</div> 
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>

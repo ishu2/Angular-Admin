@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable, BehaviorSubject } from 'rxjs';
 import {Http,Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -18,8 +18,12 @@ officers=[
     {id:5,name:"Rinku",district:"Rohini-36",doj:"12/04/16",rtd:"12/11/80"},
     {id:6,name:"Rohan",district:"Rohini-15",doj:"12/04/16",rtd:"12/11/80"},
     {id:7,name:"Veer",district:"Rohini-16",doj:"12/04/16",rtd:"12/11/80"},
+
     {id:8,name:"Viraj",district:"Rohini-36",doj:"12/04/16",rtd:"12/11/80"} 
 ]
+
+officersSubject: BehaviorSubject<Officer[]> = new BehaviorSubject<Officer[]>(this.officers);
+officersObservable: Observable<Officer[]> = this.officersSubject.asObservable();
 
 getLength(){
     return this.officers.length;
@@ -31,6 +35,8 @@ getOfficers(){
 
 addOfficer(officer:Officer){
     this.officers.push(officer);
+    this.officersSubject.next(this.officers);
+    console.log("officers in service add",this.officers);
 }
 
 deleteOfficer(id:number){
