@@ -13,7 +13,7 @@ export class LoginComponent{
     }
 
     onSubmit(value:any){
-      this.router.navigateByUrl('/admin');
+      this.router.navigateByUrl('/home');
     }
 
 }
